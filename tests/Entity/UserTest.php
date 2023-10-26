@@ -13,8 +13,9 @@ class UserTest extends TestCase
     }
     public function testInvalideEmail()
     {
-        $user = new User();
+
         $this->expectException(\InvalidArgumentException::class);
+        $user = new User();
         $user->setEmail('');
     }
 }
