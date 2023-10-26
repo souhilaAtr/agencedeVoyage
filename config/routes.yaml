@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+pdf_generate:
+    path: '/pdf'
+    controller: App\Controller\TestController::generatePdf
+

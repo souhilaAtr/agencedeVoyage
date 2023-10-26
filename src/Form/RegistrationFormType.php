@@ -45,7 +45,26 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
-            ]);
+            ])
+            // ->add('confirmPassword', PasswordType::class, [
+
+            //     // instead of being set onto the object directly,
+            //     // this is read and encoded in the controller
+            //     'mapped' => false,
+            //     'attr' => ['autocomplete' => 'new-password'],
+            //     'constraints' => [
+            //         new NotBlank([
+            //             'message' => 'donner votre mot de passe ',
+            //         ]),
+            //         new Length([
+            //             'min' => 6,
+
+            //             'max' => 4096,
+            //         ]),
+            //     ],
+
+            // ])
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

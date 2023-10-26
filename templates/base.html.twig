@@ -30,14 +30,21 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('app_login')}}">connexion</a>
-                    </li>
+                    {% if app.user %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{path('app_logout')}}">Deconnexion</a>
                     </li>
+                    {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinations</a>
+                        <a class="nav-link" href="{{path('app_login')}}">connexion</a>
+                    </li>
+
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{path('app_reservation_index')}}">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Destination</a>
                     </li>
 
                 </ul>
