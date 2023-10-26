@@ -5,15 +5,16 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
-    public function testValidEmail(){
+    public function testValidEmail()
+    {
         $user = new User();
-        $user->setEmail("ssouhila5@gmail.com");
-        $this->assertEquals("ssouhila5@gmail.com", $user->getEmail());
+        $user->setEmail("mpol@gmail.com");
+        $this->assertEquals("mpol@gmail.com", $user->getEmail());
     }
-    public function testInvalideEmail(){
+    public function testInvalideEmail()
+    {
         $user = new User();
         $this->expectException(\InvalidArgumentException::class);
         $user->setEmail('');
     }
-
 }
