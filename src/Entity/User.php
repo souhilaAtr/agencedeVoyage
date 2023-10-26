@@ -20,8 +20,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-   
-   
+
+
+    #[Assert\NotBlank(message: "le champ email ne doit pas etre vide.")]
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
