@@ -17,6 +17,6 @@ class HomeControllerTest extends WebTestCase
 
         // vérifie que le contenu de la page contient le message "bienvenue sur la page d'accueil
 
-        $this->assertStringContainsString('Bienvenue souhila sur la page d\'accueil', $crewler->filter('h1')->text());
+        $this->assertStringContainsString('Bienvenue sur la page d\'accueil', $crewler->filter('h1')->text());
     }
 }
