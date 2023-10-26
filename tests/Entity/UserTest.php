@@ -16,6 +16,7 @@ class UserTest extends TestCase
 
         $this->expectException(\InvalidArgumentException::class);
         $user = new User();
+        $this->expectExceptionMessage("message d'exception attendu");
         $user->setEmail('');
     }
 }
